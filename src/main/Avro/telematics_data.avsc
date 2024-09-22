@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "TelematicsAvroModel",
+  "namespace": "com.fleet.telematics",
+  "fields": [
+    { "name": "deviceId", "type": "string" },
+    { "name": "latitude", "type": "double" },
+    { "name": "longitude", "type": "double" },
+    { "name": "fuelPercentage", "type": "double" },
+    { "name": "speed", "type": "double" }
+  ]
+}
+

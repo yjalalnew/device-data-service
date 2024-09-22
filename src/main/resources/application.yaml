@@ -1,0 +1,17 @@
+kafka-config:
+  bootstrap-servers: my-confluent-cp-kafka-headless:9092
+  schema-registry-url-key: schema.registry.url
+  schema-registry-url: http://my-confluent-cp-schema-registry:8081
+  num-of-partitions: 3
+  replication-factor: 3
+
+kafka-producer-config:
+  key-serializer-class: org.apache.kafka.common.serialization.UUIDSerializer
+  value-serializer-class: io.confluent.kafka.serializers.KafkaJsonSerializer
+  compression-type: none
+  acks: all
+  batch-size: 16384
+  batch-size-boost-factor: 100
+  linger-ms: 5
+  request-timeout-ms: 60000
+  retry-count: 5

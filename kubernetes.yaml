@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: device-data-service
+  labels:
+    app: device-data-service
+spec:
+  selector:
+    matchLabels:
+      app: device-data-service
+  template:
+    metadata:
+      labels:
+        app: device-data-service
+    spec:
+      containers:
+      - name: device-data-service
+        image: device-data-service-image
+        ports:
+        - containerPort: 8182
